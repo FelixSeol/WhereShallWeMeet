@@ -75,7 +75,7 @@
                         <span data-feather="plus-circle"></span>
                     </a>
                 </h6>
-                <ul id="addedPlace" class="nav flex-column mb-2">
+                <ul id="addedPlace" class="nav flex-column mb-5">
 
                 </ul>
             </div>
@@ -100,11 +100,11 @@
     var map = new naver.maps.Map('map', mapOptions);
 
     var markerList = [];
-    var eMarkerList= [];
 
+    newPoint(map,markerList);
 
-    newPoint(map,markerList,eMarkerList);
-
+    console.log(eMarkerList(markerList));
+    
     // 검색창 keyup eventListener. 자동완성 때 사용.
     document.getElementById('searchWindow').addEventListener('keyup', function (event) {
         console.log("key up event : " + event);
