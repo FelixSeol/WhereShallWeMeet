@@ -10,6 +10,7 @@ function newPoint(map,markerList){
         naver.maps.Event.addListener(marker, "click", function(e) {
             delPointByMarker(marker);
         });
+        
         markerList.push(marker);
         appendBymarker(markerList);
         
@@ -22,7 +23,6 @@ function delPoint(markerList){
         markerList[i].setMap(null);
         markerList[i].visible=false;
         $(this).remove();
-        console.log(eMarkerList(markerList));
     });
 }
 function appendBymarker(markerList){
@@ -30,9 +30,9 @@ function appendBymarker(markerList){
     $('#addedPlace').append(text);
 }
 function delPointByMarker(marker){
+    marker.setMap(null);
     marker.visible=false;
     $(document.getElementsByName(marker.name)).remove();
-    console.log(eMarkerList(markerList));
 }
 
 function eMarkerList(markerList){
