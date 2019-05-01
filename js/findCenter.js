@@ -6,9 +6,9 @@ function findCenter(){
     var m = [0, 0];
 
      // 출발지 vertext들의 좌표를 모음
-     for(var i = 0; i < addedPlace.length; i++){   
-         x_position[i]=Number(addedPlace[i].x);
-         y_position[i]=Number(addedPlace[i].y);
+    for(var i = 0; i < addedPlace.length; i++){
+        x_position[i]=Number(addedPlace[i].x);
+        y_position[i]=Number(addedPlace[i].y);
      }
 
      // 다각형의 무게중심을 구함
@@ -20,5 +20,5 @@ function findCenter(){
     m[0]/= addedPlace.length;
     m[1]/= addedPlace.length;
 
-    console.log("중심위치 : x = " + m[0] + ", " + "y = " + m[1]);
+    return m;
 }
