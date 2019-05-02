@@ -11,6 +11,7 @@ function searchPlace(_keyword, _coordinate) {
                 res.json().then(body => {
                     var placesData = JSON.parse(body).places;
                     console.log(placesData);
+                    result.push(placesData.length);
                     resolve(placesData);
 
                     for (var i = 0; i < placesData.length; i++) {
